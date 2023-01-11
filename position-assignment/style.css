@@ -1,41 +1,41 @@
-body{
-    background-color: black;
-}
-
-.parent{                                                                                         
-    position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(5, 5, 5);
+  }
+  .parent {
+    height: 500px;
     width: 300px;
-    height: 600px;
-    background-color: white;
-     left: 40%; 
     border-radius: 50px;
-}
-.child{
-    position: absolute;
-    width:300px;
-    height: 300px;
-    background-color: gray;
-    z-index: 1;
+    background-color: white;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .child {
+    height: 250px;
     border-radius: 50px 50px 0 50px;
-    /* overflow: hidden; */
-
-}
-.child::before, .child::after {
+    background-color: gray;
+    position: relative;
+  }
+  
+  .child::before,
+  .child::after {
     content: "";
     position: absolute;
-    height: 100px;
-    width: 100px;
-    right: 0;
     bottom: 0;
-    transform: translate(0,100%);
-    background-color: gray;
-   
-}
-.child::after {
+    right: 0;
+    transform: translate(0, 100%);
     width: 100px;
+    height: 100px;
+    background: gray;
+  }
+  
+  .child::after {
+    width: 200px;
     height: 200px;
     border-radius: 50px;
-    background-color: white;
-}
-
-
+    background: white;
+  }
